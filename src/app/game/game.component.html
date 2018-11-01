@@ -1,0 +1,18 @@
+<p-dialog header="User Input" [(visible)]="display" modal="true">
+  <app-user-input-form (submitFormEvent)="SubmitForm($event)"></app-user-input-form>
+</p-dialog>
+<button class="btn btn-primary" type="text" (click)="showDialog()" pButton icon="pi pi-info-circle" label="Show Form"></button>
+
+<div *ngIf="matrix.length && !display">
+  <div *ngFor="let r of matrix">
+    <a class="box" href="javascript:void(0)" [class.active]="c.isSelected" *ngFor="let c of r.innerArray" (click)="toggleColor(r.row, c.col)"></a>
+  </div>
+</div>
+
+<p-dialog header="Won!!!" [(visible)]="winner" modal="true">
+  <p>Hurrey, You have won the game.</p>
+</p-dialog>
+
+<p-dialog header="Loser!!!" [(visible)]="loser" modal="true">
+  <p>Aw!!!, Try Again.</p>
+</p-dialog>

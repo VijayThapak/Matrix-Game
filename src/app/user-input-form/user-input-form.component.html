@@ -1,0 +1,16 @@
+<form [formGroup]="userForm" (submit)="submitForm()">
+  <div class="form-group">
+    <label for="matrix">Matrix:</label>
+    <input type="text" formControlName="squareBoxes" class="form-control" id="matrix" placeholder="Enter n*n matrix"
+      name="matrix">
+  </div>
+  <div class="form-group">
+    <label for="color">Color Value:</label>
+    <input type="text" class="form-control" formControlName="color" id="color" placeholder="Enter Color" name="color">
+  </div>
+  <div class="form-group">
+    <label for="timer">Timer:</label>
+    <input type="text" class="form-control" formControlName="timer" id="timer" placeholder="Enter Timer" name="timer">
+  </div>
+  <button type="submit" class="btn btn-success" [disabled]="!userForm.valid">Submit</button>
+</form>

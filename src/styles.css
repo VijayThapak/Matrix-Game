@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+.form-control.ng-invalid {
+  border: 1px solid red;
+}
+
+a.box {
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  border: 1px solid blue;
+  background: white;
+}
+
+a.active {
+  background: red;
+}
